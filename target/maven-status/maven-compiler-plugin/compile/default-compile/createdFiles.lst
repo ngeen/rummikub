@@ -1,0 +1,14 @@
+com/digitoy/games/models/tiles/FalseJoker.class
+com/digitoy/games/models/Player.class
+com/digitoy/games/actions/BoardActions.class
+com/digitoy/games/models/Board.class
+com/digitoy/games/models/Table.class
+com/digitoy/games/models/tiles/BlackTile.class
+com/digitoy/games/models/tiles/YellowTile.class
+com/digitoy/games/actions/GameActions.class
+com/digitoy/games/models/tiles/Tile.class
+com/digitoy/games/models/tiles/RedTile.class
+com/digitoy/games/models/tiles/BlueTile.class
+com/digitoy/games/actions/TableActions.class
+com/digitoy/games/Main.class
+com/digitoy/games/actions/TileActions.class
