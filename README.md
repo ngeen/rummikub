@@ -10,4 +10,4 @@ For running application, you need Java8 JRE or Java8 JDK. From the console run f
 
 ~#java -jar rummikub-1.0-SNAPSHOT.jar
 
-[You can access detail profile from here ...](https://www.oenginoz.com)
+[You can access my detail profile from here ...](https://www.oenginoz.com)
