@@ -33,6 +33,7 @@ public class GameActions {
         System.out.println();
 
         for (Player player : t.getPlayers()) {
+            System.out.println("----------------------------------------------------------------------------");
             System.out.print(player.getName());
             System.out.print(" / Joker Sayısı : "+player.getJokerCount());
             System.out.println();
@@ -46,7 +47,7 @@ public class GameActions {
 
         System.out.println();
 
-        System.out.println(printBestScore(t).getName()+" is best hand");
+        System.out.println(printBestScore(t).getName()+" is best hand score is : "+printBestScore(t).getBoard().getScore() );
     }
 
     private Player printBestScore(Table table){

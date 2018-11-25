@@ -31,16 +31,19 @@ public class BoardActions {
 
         }
 
-        int groupScore = 0;
+        int groupScore = board.getScore();
         for (List<Tile> ts : ListMain) {
-            if(ts.size() >2)
+            if(ts.size() >2){
                 groupScore += ts.size();
+                System.out.println("Consecutive Numbers : ");
+                ts.stream().forEach(x -> System.out.print(x.getName()+ " "));
+                System.out.println();
+            }
             else
                ts.stream().forEach(x -> nonConsecutive.add(x));
            //ts.stream().forEach(x -> System.out.print(x.getName()+ " "));
            //System.out.println();
         }
-        //System.out.println();
 
         board.setScore(groupScore);
     }
@@ -49,11 +52,17 @@ public class BoardActions {
         Map<Integer, ArrayList<Tile>> setsOfTiles = nonConsecutive.stream()
                 .filter(distinctByKey(Tile::getName))
                 .collect(Collectors.groupingBy(Tile::getKey, Collectors.toCollection(ArrayList<Tile>::new)));
+        int score = board.getScore();
         for(Map.Entry<Integer, ArrayList<Tile>> entry : setsOfTiles.entrySet()) {
             Integer key = entry.getKey();
             List<Tile> value = entry.getValue();
-            if(value.size() > 2)
-                board.setScore(board.getScore() + value.size());
+            if(value.size() > 3){
+                score += value.size();
+                System.out.println("Different colors with same numbers : ");
+                board.setScore(score);
+                value.stream().forEach(x-> System.out.print(x.getName()+" "));
+                System.out.println();
+            }
         }
     }
 
